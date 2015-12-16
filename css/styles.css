@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.clear:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+canvas {
+    background-color: #002b36;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+#container-landing {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    z-index: 1;
+}
+
+img.logo {
+    left: 50%;
+    position: relative;
+    transform: translate(-50%);
+    width: 33vh;
+}
+
+h1.logo {
+    color: white;
+    font-size: 5vw;
+    font-weight: 700;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+@media only screen and (max-device-width: 800px) and (orientation: portrait) {
+    img.logo {
+        width: 33vw;
+    }
+    h1.logo {
+        font-size: 5vh;
+    }
+}
