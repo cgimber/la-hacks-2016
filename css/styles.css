@@ -15,9 +15,10 @@
 
 html,
 body {
-    height: 100%;
     font-family: 'Ubuntu', sans-serif;
+    font-size: 62.5%;
     font-weight: 400;
+    height: 100%;
 }
 
 canvas {
@@ -25,6 +26,126 @@ canvas {
     height: 100%;
     position: fixed;
     z-index: -1;
+}
+
+#container-clouds {
+    height: 33%;
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.cloud {
+    opacity: 0.85;
+    position: absolute;
+    /* Animation shorthand syntax order: name, duration, timing-function, delay, iteration-count, direction, fill-mode */
+    -webkit-animation: move linear infinite;
+    -moz-animation: move linear infinite;
+    -o-animation: move linear infinite;
+    animation: move linear infinite;
+    z-index: 2;
+}
+
+.cloud__01 {
+    top: 10vh;
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.cloud__02 {
+    top: 7.5vh;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+.cloud__03 {
+    top: 5vh;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    animation-delay: 6s;
+}
+
+.cloud__04 {
+    top: -7.5vh;
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    -o-animation-delay: 10s;
+    animation-delay: 10s;
+}
+
+.cloud__05 {
+    top: 10vh;
+    -webkit-animation-delay: 14s;
+    -moz-animation-delay: 14s;
+    -o-animation-delay: 14s;
+    animation-delay: 14s;
+}
+
+.cloud__06 {
+    top: 5vh;
+    -webkit-animation-delay: 17s;
+    -moz-animation-delay: 17s;
+    -o-animation-delay: 17s;
+    animation-delay: 17s;
+}
+
+.cloud__07 {
+    top: -2.5vh;
+    -webkit-animation-delay: 20s;
+    -moz-animation-delay: 20s;
+    -o-animation-delay: 20s;
+    animation-delay: 20s;
+}
+
+.cloud__08 {
+    top: 7.5vh;
+    -webkit-animation-delay: 23s;
+    -moz-animation-delay: 23s;
+    -o-animation-delay: 23s;
+    animation-delay: 23s;
+}
+
+.cloud__09 {
+    top: 15vh;
+    -webkit-animation-delay: 27s;
+    -moz-animation-delay: 27s;
+    -o-animation-delay: 27s;
+    animation-delay: 27s;
+}
+
+.cloud--sml {
+    left: -5vh;
+    height: 5vh;
+    -webkit-animation-duration: 25s;
+    animation-duration: 25s;
+}
+
+.cloud--med {
+    left: -10vh;
+    height: 10vh;
+    -webkit-animation-duration: 35s;
+    animation-duration: 35s;
+}
+
+.cloud--lrg {
+    left: -20vh;
+    height: 20vh;
+    -webkit-animation-duration: 50s;
+    animation-duration: 50s;
+}
+
+@-webkit-keyframes move {
+    from {
+        -webkit-transform: translateX(0vw);
+    }
+    to {
+        -webkit-transform: translateX(115vw);
+    }
 }
 
 #container-landing {
@@ -45,7 +166,7 @@ img.logo {
 
 h1.logo {
     color: white;
-    font-size: 5vw;
+    font-size: 6rem;
     font-weight: 700;
     padding-top: 1rem;
     text-align: center;
@@ -56,11 +177,4 @@ ul {
     padding: 0;
 }
 
-@media only screen and (max-device-width: 800px) and (orientation: portrait) {
-    img.logo {
-        width: 33vw;
-    }
-    h1.logo {
-        font-size: 5vh;
-    }
-}
+@media only screen and (max-device-width: 800px) and (orientation: portrait) {}
