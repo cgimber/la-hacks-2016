@@ -100,6 +100,7 @@ canvas {
     -moz-animation-delay: 20s;
     -o-animation-delay: 20s;
     animation-delay: 20s;
+    z-index: 3;
 }
 
 .cloud__08 {
