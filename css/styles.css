@@ -123,6 +123,8 @@ canvas {
     left: -5vh;
     height: 5vh;
     -webkit-animation-duration: 25s;
+    -moz-animation-duration: 25s;
+    -o-animation-duration: 25s;
     animation-duration: 25s;
 }
 
@@ -130,6 +132,8 @@ canvas {
     left: -10vh;
     height: 10vh;
     -webkit-animation-duration: 35s;
+    -moz-animation-duration: 35s;
+    -o-animation-duration: 35s;
     animation-duration: 35s;
 }
 
@@ -137,6 +141,8 @@ canvas {
     left: -20vh;
     height: 20vh;
     -webkit-animation-duration: 50s;
+    -moz-animation-duration: 50s;
+    -o-animation-duration: 50s;
     animation-duration: 50s;
 }
 
@@ -149,10 +155,40 @@ canvas {
     }
 }
 
+@-moz-keyframes move {
+    from {
+        -moz-transform: translateX(0vw);
+    }
+    to {
+        -moz-transform: translateX(115vw);
+    }
+}
+
+@-o-keyframes move {
+    from {
+        -o-transform: translateX(0vw);
+    }
+    to {
+        -o-transform: translateX(115vw);
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0vw);
+    }
+    to {
+        transform: translateX(115vw);
+    }
+}
+
 #container-landing {
     left: 50%;
     position: absolute;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 75%;
     z-index: 1;
@@ -161,6 +197,9 @@ canvas {
 img.logo {
     left: 50%;
     position: relative;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
     transform: translate(-50%);
     width: 33vh;
 }
@@ -177,5 +216,3 @@ ul {
     list-style: none;
     padding: 0;
 }
-
-@media only screen and (max-device-width: 800px) and (orientation: portrait) {}
